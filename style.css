@@ -103,7 +103,10 @@ section {
 }
 
 .services,
-.skills {
+.skills,
+.education,
+.experience,
+.contact {
   min-height: 100vh;
   padding: 5rem 9%;
   text-align: center;
@@ -166,9 +169,187 @@ section {
   box-shadow: 0 0 20px #b74b4b;
 }
 
+.education-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  margin: 2rem 5rem;
+  background-color: white;
+  border: 2px solid #b74b4b;
+  box-shadow: 0 4px 20px rgba(183, 75, 75, 0.3);
+  color: #333;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.education-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-text {
+  flex: 1;
+  color: #b74b4b;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 5rem;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(50% - 2rem);
+  max-width: 31.25rem;
+  transition: transform 0.3s ease;
+  border: 0.125rem solid #b74b4b;
+}
+
+.project-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.project-card img {
+  width: 100%;
+  height: 11.25rem; /* 180px = 11.25rem */
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  color: #333;
+}
+
+.project-info h3 {
+  margin: 0;
+  color: #b74b4b;
+  font-size: 1.3rem;
+}
+
+.project-info p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.selenium-icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #b74b4b;
+  margin-bottom: 1.5rem;
+}
+
+.contact {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: black;
+  color: white;
+}
+
+.contact-container p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button i {
+  font-size: 2.5rem;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+
+.contact .whatsapp-button span {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .services-container {
     grid-template-columns: 1fr;
+  }
+  /* === Skills & Services === */
+  .services-container,
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box,
+  .skills-box {
+    padding: 2rem;
+  }
+
+  /* === Education === */
+  .education-container {
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .education-image img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .education-text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  /* === Experience (sama treatment-nya seperti education) === */
+  .experience-container {
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* === Contact Section === */
+  .contact-container p {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  .whatsapp-button {
+    font-size: 1.4rem;
+    padding: 1.2rem 2.4rem;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .whatsapp-button i {
+    font-size: 3rem;
   }
 }
 
